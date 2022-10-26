@@ -10,17 +10,17 @@ class LayoutFactoryTest {
             Layout layout = LayoutFactory.getLayout("LayoutUser");
             fail();
         } catch (IllegalArgumentException e) {
-            assertEquals("Serviço inexistente", e.getMessage());
+            assertEquals("Layout inexistente", e.getMessage());
         }
     }
 
     @Test
     void shouldThrowsWithInvalidLayout() {
         try {
-            Layout layout = LayoutFactory.getLayout("LayoutCommerce");
+            Layout layout = LayoutFactory.getLayout("CommerceLayout");
             fail();
         } catch (IllegalArgumentException e) {
-            assertEquals("Serviço inválido", e.getMessage());
+            assertEquals("Layout inválido", e.getMessage());
         }
     }
 }
